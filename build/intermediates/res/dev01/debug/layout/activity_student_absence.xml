@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/layout_student_absence"
+    android:background="@color/background_dark">
+    <RelativeLayout 
+        android:id="@+id/title_bar"
+        android:layout_height="@dimen/title_bar_height"
+        android:layout_width="fill_parent"
+        android:layout_alignParentTop="true"
+        android:background="@color/blue_main">
+        <ImageButton 
+            android:id="@+id/title_back"
+            android:layout_height="50dp"
+            android:layout_width="20dp"
+            android:layout_alignParentLeft="true"
+            android:background="@null"
+            android:src="@drawable/nav_back_selector"/>
+        
+        <co.onemeter.oneapp.ui.widget.PressedTextView
+		    android:id="@+id/textView_home_back"
+		    android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+		    android:layout_toRightOf="@id/title_back"
+		  	android:gravity="center_vertical"
+		  	android:textSize="16sp"
+		  	android:clickable="true"
+		   	android:textColor="@color/white"
+		    android:text="首页" />
+        
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="请假"/>
+        
+        <co.onemeter.oneapp.ui.widget.PressedTextView
+            android:id="@+id/title_apply"
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:text="申请" />
+    </RelativeLayout>
+
+    <ScrollView 
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/title_bar">
+        <LinearLayout 
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:paddingTop="@dimen/setting_top_margin"
+            android:paddingBottom="@dimen/setting_top_margin"
+            android:orientation="vertical">
+
+           <LinearLayout 
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="@dimen/setting_items_padding"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_diliver_class_up"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/bg_section_divider_line_dark"/>
+                
+                <LinearLayout
+                    android:id="@+id/layout_absence_class" 
+                    android:layout_height="50dp"
+                    android:layout_width="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:clickable="true">
+                    <TextView 
+                        android:layout_height="fill_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:text="班级" />
+                    
+                    <TextView
+                        android:id="@+id/textView_class_name" 
+                        android:layout_height="fill_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:singleLine="true"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"
+                        android:drawableRight="@drawable/table_arrow"
+                        android:textColor="@color/gray_40"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/img_diliver_class_bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/bg_section_divider_line_dark"/>
+                
+                
+                <ImageView
+                    android:id="@+id/img_diliver_lesson_up"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_section_divider_line_dark"/>
+                <LinearLayout 
+                    android:id="@+id/layout_absence_lesson" 
+                    android:layout_height="50dp"
+                    android:layout_width="fill_parent"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:clickable="true">
+                    <TextView 
+                        android:layout_height="fill_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:text="课程"/>
+                    <TextView
+                        android:id="@+id/textView_lesson_name" 
+                        android:layout_height="fill_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"
+                        android:drawableRight="@drawable/table_arrow"
+                        android:textColor="@color/gray_40"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+                <ImageView 
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/bg_section_divider_line_dark"/>
+                
+                
+                
+                <ImageView 
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_section_divider_line_dark"/>
+                <LinearLayout 
+                    android:id="@+id/layout_absence_teacher" 
+                    android:layout_height="50dp"
+                    android:layout_width="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:clickable="true">
+                    <TextView 
+                        android:layout_height="fill_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:text="老师"/>
+                    <TextView
+                        android:id="@+id/textView_teacher_name" 
+                        android:layout_height="fill_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"
+                        android:drawableRight="@drawable/table_arrow"
+                        android:textColor="@color/gray_40"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+                <ImageView 
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/bg_section_divider_line_dark"/>
+                
+                
+                
+                <ImageView 
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_section_divider_line_dark"/>
+                
+                
+                    
+                    <EditText
+            		android:id="@+id/editText_absence_reason"
+                	android:layout_width="fill_parent"
+                	android:layout_height="wrap_content" 
+                	android:minHeight="150dp"
+                	android:background="@drawable/table_white"
+                	android:gravity="top"
+                	android:inputType="textMultiLine"
+                	android:paddingTop="10dp"
+                	android:paddingLeft="10dp"
+                	android:paddingRight="10dp"
+                	android:hint="请假事由" />
+                    
+                <ImageView
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/bg_section_divider_line_dark"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+    
+</RelativeLayout>
+<!-- From: file:/E:/git_android/omim_android/project/res/layout/activity_student_absence.xml -->

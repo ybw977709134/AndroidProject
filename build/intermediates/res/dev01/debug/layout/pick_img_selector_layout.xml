@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/contacts_glass">
+
+    <LinearLayout
+                  android:orientation="vertical"
+                  android:layout_width="@dimen/create_moment_option_tags_width"
+                  android:layout_height="wrap_content"
+                  android:layout_centerInParent="true"
+                  android:background="@drawable/table_white">
+
+        <TextView
+                android:id="@+id/pick_img_from_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="@string/moments_compose_gallery"
+                android:textColor="@color/black"
+                android:textSize="@dimen/create_moment_option_tag_txt_size"
+                android:background="@drawable/create_tag_bg_selector"/>
+
+        <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:background="@drawable/divider"/>
+
+        <TextView
+                android:id="@+id/pick_img_from_camera"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="@string/moments_compose_camera"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/create_moment_option_tag_txt_size"
+                android:background="@drawable/create_tag_bg_selector"/>
+    </LinearLayout>
+</RelativeLayout><!-- From: file:/E:/git_android/omim_android/project/res/layout/pick_img_selector_layout.xml -->

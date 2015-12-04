@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="right"
+    android:orientation="horizontal" >
+    <TextView
+        android:id="@+id/msg_date"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/msg_date"
+        android:layout_marginTop="10dp" >
+        
+        
+        <FrameLayout
+        android:id="@+id/frame_photo"
+        android:layout_height="40dp"
+        android:layout_width="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+        <co.onemeter.oneapp.ui.CircleImageView
+            android:id="@+id/img_contact_thumbnail"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/default_avatar_90" />
+        <ImageView
+	        android:id="@+id/imageView_tag_tea"
+	       	android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="right|top"
+	        android:src="@drawable/icon_avatar_teacher"
+	        android:visibility="gone" />
+		<ImageView
+		    android:layout_height="match_parent"
+		    android:layout_width="match_parent"
+		    android:visibility="gone"
+		    android:background="@drawable/avatar_mask_40"/>
+    </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_balloon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="@dimen/msg_ballon_padding_h_size"
+            android:paddingRight="@dimen/msg_ballon_padding_h_size_add_angle"
+            android:paddingTop="@dimen/msg_ballon_padding_v_size"
+            android:paddingBottom="@dimen/msg_ballon_padding_v_size"
+            android:background="@drawable/bg_message_my_words"
+            android:orientation="horizontal"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:clickable="true">
+
+            <RelativeLayout
+                android:id="@+id/multimediaHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_thumbnail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/loc_thumbnail" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_sentstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/layout_balloon"
+            android:layout_toLeftOf="@+id/layout_balloon"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imgMarkFailed"
+                android:layout_width="@dimen/msg_send_fail_mark_size"
+                android:layout_height="@dimen/msg_send_fail_mark_size"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sms_failure" />
+
+            <TextView
+                android:id="@+id/txt_sentstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="status"
+                android:textColor="@color/black"
+                android:textSize="@dimen/msg_fix_status_and_date" />
+
+            <TextView
+                android:id="@+id/messagedetail_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/msg_fix_status_and_date" />
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:progressDrawable="@drawable/progress_color"
+                android:layout_height="4dp"
+                android:max="100"
+                android:progress="20" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout><!-- From: file:/E:/git_android/omim_android/project/res/layout/msg_list_outgo_photomsg.xml -->

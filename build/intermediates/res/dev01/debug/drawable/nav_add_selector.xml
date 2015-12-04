@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@drawable/icon_topbar_add_p"/>
+    <item android:state_focused="true" android:drawable="@drawable/icon_topbar_add_p"/>
+    <item android:drawable="@drawable/icon_topbar_add"/>
+
+</selector><!-- From: file:/E:/git_android/omim_android/project/res/drawable/nav_add_selector.xml -->

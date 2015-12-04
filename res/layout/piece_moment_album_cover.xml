@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:orientation="vertical">
+
+    <RelativeLayout
+            android:id="@+id/moment_header_non_op_layout"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent">
+
+        <ImageView
+                android:id="@+id/imgAlbumBg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/moment_default_album"/>
+
+
+<!--
+        <RelativeLayout
+                android:id="@+id/box_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/imgRotate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/refresh"
+                    android:layout_gravity="center"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="50dp"/>
+        </RelativeLayout>
+
+        <ImageView
+                android:id="@+id/img_rotate_dummy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@null"
+                android:visibility="visible"/>
+        -->
+
+        <ImageView
+                android:id="@+id/box_info_bg"
+                android:layout_height="60dp"
+                android:layout_width="fill_parent"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/contacts_glass"
+                android:scaleType="fitXY"/>
+
+        <RelativeLayout
+                android:id="@+id/box_info"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:layout_alignParentBottom="true"
+                android:padding="@dimen/padding_medium">
+
+            <FrameLayout
+                    android:id="@+id/frame"
+                    android:layout_height="60dp"
+                    android:layout_width="60dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/padding_medium">
+
+                <ImageView
+                        android:id="@+id/img_thumbnail"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent"
+                        android:layout_margin="3dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/default_avatar_90"/>
+
+                <ImageView
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent"
+                        android:background="@drawable/photo_frame"/>
+            </FrameLayout>
+
+            <TextView
+                    android:id="@+id/txt_signature"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_alignBottom="@+id/frame"
+                    android:layout_toRightOf="@+id/frame"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:singleLine="true"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_small"
+                    android:textSize="15sp"/>
+
+            <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_height="30dp"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:layout_toRightOf="@+id/frame"
+                    android:layout_above="@+id/txt_signature"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/padding_small"
+                    android:paddingRight="@dimen/padding_small"/>
+
+            <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progress_uploading_albumcover"
+                    style="@android:style/Widget.ProgressBar.Small"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <ImageView
+                android:id="@+id/imgRefreshRotate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/refresh"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="50dp"/>
+<!--
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Reviews"
+                android:id="@+id/btn_new_reviews"
+                android:textColor="#fff"
+                android:background="@drawable/feed_btn_notification_selector"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="0dp"/>
+        -->
+    </RelativeLayout>
+
+    <include layout="@layout/moment_header_bottom_op_line"/>
+
+</LinearLayout>

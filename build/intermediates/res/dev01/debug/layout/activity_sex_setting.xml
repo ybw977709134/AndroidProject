@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background_dark" >
+	<RelativeLayout
+		android:id="@+id/title_bar"
+		android:layout_height="50dp"
+		android:layout_width="fill_parent"
+		android:layout_alignParentTop="true"
+		style="@style/title_bar_blue_main">
+		<ImageButton
+			android:id="@+id/title_back"
+			android:layout_height="50dp"
+			android:layout_width="20dp"
+			android:layout_alignParentLeft="true"
+			android:background="@null"
+			android:src="@drawable/icon_back_selector"/>
+		
+		<co.onemeter.oneapp.ui.widget.PressedTextView 
+		    android:id="@+id/textView_myinfo_back"
+		    android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+		    android:layout_toRightOf="@id/title_back"
+		  	android:gravity="center_vertical"
+		  	android:textSize="16sp"
+		  	android:clickable="true"
+		   	android:textColor="@color/white"
+		    android:text="@string/settings_myinfo" />
+		
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_centerInParent="true"
+			style="@style/page_title_dark"
+			android:text="@string/settings_sex"/>
+	</RelativeLayout>
+	
+	<!-- 男 -->
+	<LinearLayout
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:layout_below="@+id/title_bar"
+            android:orientation="vertical">
+        
+        <ImageView
+				style="@style/bg_section_divider_line_dark"
+				android:layout_marginTop="20dp" />
+        
+        	<RelativeLayout 
+            	android:id="@+id/layout_setting_male"
+            	android:layout_width="wrap_content"
+           		 android:layout_height="wrap_content"
+           		 android:clickable="true" >
+            
+        		<TextView
+                android:id="@+id/edt_value_male"
+                android:layout_height="45dp"
+                android:layout_width="fill_parent"
+                android:maxLength="80"
+                style="@style/inputbox_white"
+                android:text="男"
+                android:clickable="true"
+                android:paddingLeft="10dp" />
+        
+        		<!-- 男性选中 -->
+                <ImageButton
+        			android:id="@+id/imageButton_male"
+        			android:layout_height="19dp"
+        			android:layout_width="19dp"
+        			android:layout_alignRight="@+id/edt_value_male"
+        			android:layout_marginRight="5dp"
+        			android:layout_centerVertical="true"
+        			android:visibility="gone"
+        			android:background="@drawable/icon_section_select"/>
+        	</RelativeLayout>
+        
+        <ImageView
+				style="@style/bg_section_divider_line_light"/>
+        
+        
+        <!-- 女性 -->
+
+        <RelativeLayout 
+            android:id="@+id/layout_setting_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true" >
+            
+        <TextView
+                android:id="@+id/edt_value_female"
+                android:layout_height="45dp"
+                android:layout_width="fill_parent"
+                android:maxLength="80"
+                style="@style/inputbox_white"
+                android:text="女"
+                android:clickable="true"
+                android:paddingLeft="10dp" />
+        
+        <!-- 女性选中  -->
+                <ImageButton
+        			android:id="@+id/imageButton_female"
+        			android:layout_height="19dp"
+        			android:layout_width="19dp"
+        			android:layout_alignRight="@+id/edt_value_female"
+        			android:layout_marginRight="5dp"
+        			android:layout_centerVertical="true"
+        			android:visibility="gone"
+        			android:background="@drawable/icon_section_select"/>
+        </RelativeLayout>
+        
+        <ImageView
+				style="@style/bg_section_divider_line_dark"/>
+        </LinearLayout>
+</RelativeLayout>
+<!-- From: file:/E:/git_android/omim_android/project/res/layout/activity_sex_setting.xml -->

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:id="@+id/lay_myclass_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        style="?attr/navbar">
+
+        <ImageButton
+            android:id="@+id/title_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:background="@null"
+            android:src="@drawable/icon_back_selector"
+            android:visibility="gone" />
+
+        <TextView
+            style="?attr/navbar_title"
+            android:text="@string/myclasses_title" />
+    </RelativeLayout>
+
+    <!--
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/livingClass"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:src="@drawable/class_bg_1"/>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:src="@drawable/class_bg_2"/>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:src="@drawable/class_bg_3"/>
+        </LinearLayout>
+    </ScrollView>
+    -->
+
+    <ListView
+        android:id="@+id/lv_myClass"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bar"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/bg_section_divider_line_light"
+        android:scrollbars="none"></ListView>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        style="@android:style/Widget.DeviceDefault.ProgressBar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/progressbar_load" />
+    
+    
+    <LinearLayout
+        android:id="@+id/layout_add_class"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_below="@+id/title_bar"
+		android:layout_marginTop="@dimen/padding_medium"
+		android:visibility="gone">
+
+		<ImageView
+			style="@style/standard_list_divider"/>
+		<EditText
+			android:id="@+id/txt_code"
+			style="@style/inputbox_borderless"
+			android:hint="@string/invite_code"
+			android:imeOptions="actionDone"/>
+		<ImageView
+			style="@style/standard_list_divider"/>
+
+		<Button
+			android:id="@+id/btn_add"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="@dimen/padding_medium"
+			android:text="@string/add"
+			android:textColor="@color/text_gray2"
+			style="@style/button_bule_register"/>
+	</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:state_pressed="true" android:drawable="@drawable/map_button_pressed" /> <!-- pressed -->
+<item android:drawable="@drawable/map_button_normal" /> <!-- default -->
+</selector>
+<!-- From: file:/E:/git_android/omim_android/lib/message-input/res/drawable/map_button.xml --><!-- From: file:/E:/git_android/omim_android/project/build/intermediates/exploded-aar/omim_android.lib/message-input/unspecified/dev01Debug/res/drawable/map_button.xml -->

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black">
+    <!-- layout for init animation,coming lighter-->
+    <FrameLayout
+            android:id="@+id/init_anim_coming_lighter_layout"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:background="@drawable/qr_shutter_light"/>
+
+        <ImageView
+                android:id="@+id/qr_init_lighter_mask_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/qr_scan_bar_bg"/>
+    </FrameLayout>
+
+    <FrameLayout
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <!-- layout for qr_code scan-->
+        <RelativeLayout
+                android:id="@+id/qr_scan_layout"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+            <!-- top scan -->
+            <RelativeLayout
+                    android:id="@+id/title_bar"
+                    android:layout_height="50dp"
+                    android:layout_width="fill_parent"
+                    android:layout_alignParentTop="true"
+                    style="?attr/navbar">
+                <ImageButton
+                        android:id="@+id/title_back"
+                        android:layout_height="50dp"
+                        android:layout_width="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:background="@null"
+                        android:src="@drawable/nav_back"/>
+                <TextView
+                        android:id="@+id/qr_title"
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:text="@string/scan_qr_code"/>
+            </RelativeLayout>
+            <!-- scan entity -->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/title_bar"
+                    android:layout_above="@+id/qr_scan_bottom_btn"
+                    android:orientation="vertical">
+
+                <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <SurfaceView
+                            android:id="@+id/preview_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"/>
+                        <com.zxing.view.ViewfinderView
+                            android:id="@+id/viewfinder_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/transparent"/>
+                </FrameLayout>
+            </LinearLayout>
+            <!-- bottom button -->
+            <LinearLayout
+                    android:id="@+id/qr_scan_bottom_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/qr_scan_bar_bg"
+                    android:orientation="horizontal">
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:id="@+id/scan_qr_code_bottom_btn_photo"
+                            android:layout_width="@dimen/scan_qr_code_bottom_image_size"
+                            android:layout_height="@dimen/scan_qr_code_bottom_image_size"
+                            android:background="@drawable/qr_scan_photo_selector"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/scan_qr_code_btn_gallery"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:id="@+id/scan_qr_code_bottom_btn_flash"
+                            android:layout_width="@dimen/scan_qr_code_bottom_image_size"
+                            android:layout_height="@dimen/scan_qr_code_bottom_image_size"
+                            android:background="@drawable/qr_scan_flash_selector"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/scan_qr_code_btn_flash"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:id="@+id/scan_qr_code_bottom_btn_qrcode"
+                            android:layout_width="@dimen/scan_qr_code_bottom_image_size"
+                            android:layout_height="@dimen/scan_qr_code_bottom_image_size"
+                            android:background="@drawable/qr_scan_qrcode_selector"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/scan_qr_code_btn_qrcode"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <!-- layout for animation,when init lighter finish -->
+        <RelativeLayout
+                android:id="@+id/init_anim_door_open"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+            <ImageView
+                    android:id="@+id/init_anim_door_center"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_centerInParent="true"
+                    android:src="@null"/>
+
+            <ImageView
+                    android:id="@+id/init_anim_door_above_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/scan_qr_code_init_door_line_height"
+                    android:layout_above="@id/init_anim_door_center"
+                    android:src="@null"/>
+
+            <ImageView
+                    android:id="@+id/init_anim_door_above_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_above="@id/init_anim_door_above_image"
+                    android:src="@null"/>
+
+            <ImageView
+                    android:id="@+id/init_anim_door_below_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/scan_qr_code_init_door_line_height"
+                    android:layout_below="@id/init_anim_door_center"
+                    android:src="@null"/>
+
+            <ImageView
+                    android:id="@+id/init_anim_door_below_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_below="@id/init_anim_door_below_image"
+                    android:src="@null"/>
+
+            <ImageView
+                    android:id="@+id/init_anim_door_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:layout_above="@id/init_anim_door_below_line"
+                    android:src="@drawable/qr_shutter_top"/>
+
+            <ImageView
+                    android:id="@+id/init_anim_door_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:layout_below="@id/init_anim_door_above_line"
+                    android:src="@drawable/qr_shutter_bottom"/>
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark" >
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        style="?attr/navbar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:layout_alignParentTop="true" >
+
+        <ImageButton
+            android:id="@+id/submit_left_button"
+            style="?attr/navbar_btn_left"
+            android:src="@drawable/nav_back_selector" />
+
+        <TextView
+            style="?attr/navbar_title"
+            android:text="@string/event_submitinfo" />
+
+        <co.onemeter.oneapp.ui.widget.PressedTextView
+            android:id="@+id/submit_right_button"
+            style="?attr/navbar_txt_right"
+            android:text="@string/confirm" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_bar"
+        android:orientation="vertical"
+        android:paddingTop="50dp"
+        android:paddingBottom="50dp">
+
+        <ImageView style="@style/standard_list_divider" />
+
+        <EditText
+            android:id="@+id/submit_accountInput"
+            style="@style/inputbox_borderless"
+            android:hint="@string/manage_account_user_name"
+            android:imeOptions="actionNext"
+            android:background="@color/background_light"/>
+
+        <ImageView
+            style="@style/standard_list_divider"/>
+
+        <EditText
+            android:id="@+id/submit_telephone"
+            style="@style/inputbox_borderless"
+            android:hint="@string/sys_notice_telephone"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:background="@color/background_light" />
+        <ImageView style="@style/standard_list_divider" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit_confirm"
+        style="@style/button_blue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/confirm" />
+
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/page">
+    <RelativeLayout
+            android:id="@+id/title_bar"
+            android:layout_height="50dp"
+            android:layout_width="fill_parent"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/navbar_bg">
+        <ImageButton
+                android:id="@+id/title_back"
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:layout_alignParentLeft="true"
+                android:background="@null"
+                android:src="@drawable/nav_back_selector"/>
+        <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@+id/title_back"
+                android:background="@drawable/navbar_div"
+                android:visibility="gone"/>
+
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:singleLine="true"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:text="@string/review_list"/>
+    </RelativeLayout>
+
+    <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/review_list"
+            android:cacheColorHint="@null"
+            android:layout_below="@+id/title_bar"
+            android:layout_gravity="left|center_vertical"
+            android:divider="@color/text_gray4"
+            android:dividerHeight="1dp"/>
+
+    <TextView
+            android:id="@+id/no_reviews_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/review_list_empty"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+</RelativeLayout>

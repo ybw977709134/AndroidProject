@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/create_normal_moment_with_tag_def_img_size"
+    android:layout_height="match_parent" >
+    <ImageView
+        android:id="@+id/img_photo"
+        android:layout_height="@dimen/create_normal_moment_with_tag_def_img_size"
+        android:layout_width="@dimen/create_normal_moment_with_tag_def_img_size"
+        android:layout_margin="5dp"
+        android:scaleType="fitXY"
+        android:background="@drawable/default_avatar_90"/>
+
+    <ImageButton 
+        android:id="@+id/btn_delete"
+        android:layout_height="29dp"
+        android:layout_width="29dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/write_btn_delete"
+        android:visibility="visible"/>
+</RelativeLayout>

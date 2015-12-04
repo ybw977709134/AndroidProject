@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:layout_alignParentTop="true"
+        style="?attr/navbar">
+
+        <ImageButton
+            android:id="@+id/title_back"
+            android:layout_height="50dp"
+            android:layout_width="20dp"
+            android:layout_alignParentLeft="true"
+            android:background="@null"
+            android:src="@drawable/icon_back_selector"/>
+
+        <co.onemeter.oneapp.ui.widget.PressedTextView
+            android:id="@+id/textView_homework_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/title_back"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:clickable="true"
+            android:textColor="@color/white"
+            android:text="评语" />
+
+        <TextView
+            android:id="@+id/contact_current_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="评语模板"
+            style="@style/page_title_dark"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/bg_section_divider_line_light"/>
+
+</LinearLayout>

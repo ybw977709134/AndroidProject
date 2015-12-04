@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:layout_alignParentTop="true"
+        style="?attr/navbar">
+
+        <ImageButton
+            android:id="@+id/title_back"
+            android:layout_height="50dp"
+            android:layout_width="20dp"
+            android:layout_alignParentLeft="true"
+            android:background="@null"
+            android:src="@drawable/icon_back_selector"/>
+
+        <co.onemeter.oneapp.ui.widget.PressedTextView
+            android:id="@+id/textView_homework_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/title_back"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:clickable="true"
+            android:textColor="@color/white"
+            android:text="在线作业" />
+
+        <!-- 学生提交作业， 老师作业 -->
+        <TextView
+            android:id="@+id/contact_current_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="作业"
+            style="@style/page_title_dark"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView_submit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="60dp"
+        android:divider="@null"
+        android:cacheColorHint="@null"
+        android:dividerHeight="0dp"
+        android:fadingEdge="none"
+        android:footerDividersEnabled="false"/>
+
+
+
+
+    <Button
+        android:id="@+id/btn_homework_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btn_small_bule_valid"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="text"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
+
+</RelativeLayout>

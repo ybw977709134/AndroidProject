@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants"
+                android:padding="5dp">
+    <org.wowtalk.ui.msg.RoundedImageView
+        android:id="@+id/img_photo"
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:layout_alignParentLeft="true"/>
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/img_photo"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical"
+        android:id="@+id/layout_text">
+        
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:textSize="18sp"/>
+	    <TextView
+	        android:id="@+id/txt_status"
+	        android:layout_height="0dp"
+	        android:layout_width="100dp"
+            android:layout_weight="1"
+	        android:textColor="@color/black"
+	            
+	        android:textSize="15sp"/>
+	    <TextView
+		    android:id="@+id/txt_extra"
+		    android:layout_height="0dp"
+		    android:layout_width="100dp"
+		    android:layout_weight="1"
+		    android:textSize="15sp"
+		    android:ellipsize="end"
+		    android:textColor="@color/black"
+		    />
+	    
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/layout_request_status"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+ >
+        <Button
+	        android:id="@+id/btn_ignore"
+	        android:layout_height="40dp"
+	        android:layout_width="wrap_content"
+	        android:background="@drawable/btn_white"
+            android:textSize="16sp"
+            android:textColor="@color/gray"
+	        android:text="@string/ignore"
+	        android:minWidth="60dp"
+	        android:padding="@dimen/padding_small"/>
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/btn_blue"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:text="@string/add"
+            android:minWidth="60dp"
+            android:padding="@dimen/padding_small"/>
+    </LinearLayout>
+
+</RelativeLayout>

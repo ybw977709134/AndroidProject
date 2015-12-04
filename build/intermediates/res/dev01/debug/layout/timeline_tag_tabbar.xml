@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Timeline 页面的过滤器，用于选择动态的类别。 -->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/background_dark">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:weightSum="6"
+            android:orientation="horizontal" >
+            
+            <!-- 全部 -->
+            <RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:layout_weight="1" >
+		<TextView
+			android:id="@+id/btn_tag_all"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:padding="10dp"
+			android:gravity="center"
+			android:drawablePadding="5dp"
+			android:textColor="@color/text_gray1"
+			android:text="@string/moment_tag_all"/>
+		<ImageView
+			android:id="@+id/img_tag_all"
+			android:layout_height="5dp"
+			android:layout_width="@dimen/moment_header_bottom_tag_indicator_min_width"
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentBottom="true"
+			android:background="@color/barAll"/>
+	</RelativeLayout>
+
+    <!-- 通知 -->
+	<RelativeLayout
+	    android:id="@+id/layout_timebar_notice"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:layout_weight="1" >
+		<TextView
+			android:id="@+id/btn_tag_notice"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:padding="10dp"
+			android:gravity="center"
+			android:drawablePadding="5dp"
+			android:textColor="@color/text_gray1"
+			android:text="@string/moment_tag_notice"/>
+		<ImageView
+			android:id="@+id/img_tag_notice"
+			android:layout_height="5dp"
+			android:layout_width="@dimen/moment_header_bottom_tag_indicator_min_width"
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentBottom="true"
+			android:background="@color/barNotice"/>
+	</RelativeLayout>
+
+	<!-- 问答 -->
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:layout_weight="1" >
+		<TextView
+			android:id="@+id/btn_tag_qa"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:padding="10dp"
+			android:gravity="center"
+			android:drawablePadding="5dp"
+			android:textColor="@color/text_gray1"
+			android:text="@string/moment_tag_qa"/>
+		<ImageView
+			android:id="@+id/img_tag_qa"
+			android:layout_height="5dp"
+			android:layout_width="@dimen/moment_header_bottom_tag_indicator_min_width"
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentBottom="true"
+			android:background="@color/barAnswer"/>
+	</RelativeLayout>
+
+	<!-- 学习 -->
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:layout_weight="1" >
+		<TextView
+			android:id="@+id/btn_tag_study"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:padding="10dp"
+			android:gravity="center"
+			android:drawablePadding="5dp"
+			android:textColor="@color/text_gray1"
+			android:text="@string/moment_tag_study"/>
+		<ImageView
+			android:id="@+id/img_tag_study"
+			android:layout_height="5dp"
+			android:layout_width="@dimen/moment_header_bottom_tag_indicator_min_width"
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentBottom="true"
+			android:background="@color/barStudy"/>
+	</RelativeLayout>
+	
+	<!-- 生活 -->
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:layout_weight="1" >
+		<TextView
+			android:id="@+id/btn_tag_life"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:padding="10dp"
+			android:gravity="center"
+			android:drawablePadding="5dp"
+			android:textColor="@color/text_gray1"
+			android:text="@string/moment_tag_life"/>
+		<ImageView
+			android:id="@+id/img_tag_life"
+			android:layout_height="5dp"
+			android:layout_width="@dimen/moment_header_bottom_tag_indicator_min_width"
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentBottom="true"
+			android:background="@color/barLife"/>
+	</RelativeLayout>
+
+	<!-- 投票 -->
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:layout_weight="1" >
+		<TextView
+			android:id="@+id/btn_tag_survey"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:padding="10dp"
+			android:gravity="center"
+			android:drawablePadding="5dp"
+			android:textColor="@color/text_gray1"
+			android:text="@string/moment_tag_survey"/>
+		<ImageView
+			android:id="@+id/img_tag_survey"
+			android:layout_height="5dp"
+			android:layout_width="@dimen/moment_header_bottom_tag_indicator_min_width"
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentBottom="true"
+			android:background="@color/barVote"/>
+	</RelativeLayout>
+	
+	<!-- 视频-->
+		<RelativeLayout
+		android:id="@+id/layout_timebar_video"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:layout_weight="1" >
+		<TextView
+			android:id="@+id/btn_tag_video"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:padding="10dp"
+			android:gravity="center"
+			android:drawablePadding="5dp"
+			android:textColor="@color/text_gray1"
+			android:text="@string/moment_tag_videoStudy" />
+		<ImageView
+			android:id="@+id/img_tag_vedio"
+			android:layout_height="5dp"
+			android:layout_width="@dimen/moment_header_bottom_tag_indicator_min_width"
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentBottom="true"
+			android:background="@color/barVideo"/>
+	</RelativeLayout>
+	
+	
+        </LinearLayout>
+        
+    </HorizontalScrollView>
+	
+</LinearLayout><!-- From: file:/E:/git_android/omim_android/project/res/layout/timeline_tag_tabbar.xml -->

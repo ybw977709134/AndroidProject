@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="top" >
+    <TextView
+        android:id="@+id/msg_date"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:id="@+id/frame_photo"
+        android:layout_height="40dp"
+        android:layout_width="40dp"
+        android:layout_below="@+id/msg_date"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp">
+        <co.onemeter.oneapp.ui.CircleImageView
+        	android:id="@+id/img_contact_thumbnail"
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:src="@drawable/default_avatar_90" />
+        
+        <ImageView
+	        android:id="@+id/imageView_tag_tea"
+	       	android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="right|top"
+	        android:src="@drawable/icon_avatar_teacher"
+	        android:visibility="gone" />
+        <ImageView 
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:background="@drawable/avatar_mask_40"/>
+    </FrameLayout>
+    
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/frame_photo"
+        android:layout_toRightOf="@+id/frame_photo" >
+
+        <TextView
+            android:id="@+id/txt_contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top|left"
+            android:layout_marginLeft="5dp"
+            android:text="name"
+            android:textColor="@color/black_24"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_balloon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/txt_contact_name"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/msg_ballon_padding_h_size_add_angle"
+            android:paddingRight="@dimen/msg_ballon_padding_h_size"
+            android:paddingTop="@dimen/msg_ballon_padding_v_size"
+            android:paddingBottom="@dimen/msg_ballon_padding_v_size"
+            android:background="@drawable/bg_message_other_words"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/img_thumbnail"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/icon_messages_voice" />
+
+            <TextView
+                android:id="@+id/messagedetail_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/img_thumbnail"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:gravity="center_vertical"
+                android:maxWidth="120dp"
+                android:text="00:15"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_sentstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/layout_balloon"
+            android:layout_toRightOf="@+id/layout_balloon"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/messagedetail_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/msg_fix_status_and_date" />
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:progressDrawable="@drawable/progress_color"
+                android:max="100"
+                android:progress="20" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/selected_grid_width"
+    android:background="@color/white"
+    android:layout_height="@dimen/selected_grid_width" >
+    <org.wowtalk.ui.msg.RoundedImageView
+        android:id="@+id/img_thumbnail"
+        android:layout_height="@dimen/selected_grid_width"
+        android:layout_width="@dimen/selected_grid_width"/>
+	<ImageView
+	    android:layout_height="50dp"
+	    android:layout_width="50dp"
+        android:visibility="gone"
+	    android:background="@drawable/avatar_mask_50"/>
+</FrameLayout><!-- From: file:/E:/git_android/omim_android/project/res/layout/listitem_group_selected.xml -->

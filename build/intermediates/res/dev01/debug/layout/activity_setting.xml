@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@color/background_dark"
+	android:orientation="vertical"
+	android:focusableInTouchMode="true">
+
+	<RelativeLayout
+		android:id="@+id/title_bar"
+		android:layout_width="fill_parent"
+		android:layout_height="@dimen/title_bar_height"
+		android:layout_alignParentTop="true"
+		style="?attr/navbar">
+
+		<ImageButton
+			android:id="@+id/title_back"
+			android:layout_height="50dp"
+			android:layout_width="20dp"
+			android:layout_alignParentLeft="true"
+			android:background="@null"
+			android:src="@drawable/icon_back_selector"/>
+
+		<co.onemeter.oneapp.ui.widget.PressedTextView
+			android:id="@+id/textView_home_back"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_toRightOf="@id/title_back"
+			android:gravity="center_vertical"
+			android:textSize="16sp"
+			android:clickable="true"
+			android:textColor="@color/white"
+			android:text="首页" />
+
+		<TextView
+			android:id="@+id/contact_current_group"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/settings_pagetitle"
+			style="@style/page_title_dark"/>
+	</RelativeLayout>
+
+	<ScrollView
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:fadingEdge="none"
+		android:layout_below="@+id/title_bar">
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:layout_marginTop="@dimen/setting_items_padding"
+			android:orientation="vertical">
+
+			<ImageView
+				style="@style/bg_section_divider_line_dark"/>
+
+			<RelativeLayout
+				android:id="@+id/layout_settings_myinfo"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@color/white">
+
+				<FrameLayout
+					android:id="@+id/frame_photo"
+					android:layout_height="80dp"
+					android:layout_width="80dp"
+					android:layout_alignParentLeft="true"
+					android:padding="5dp"
+					>
+
+					<ImageView
+						android:id="@+id/img_thumbnail"
+						android:layout_height="match_parent"
+						android:layout_width="match_parent"
+						android:background="@drawable/default_avatar_90"/>
+
+					<ImageView
+						android:id="@+id/imageView_tag_tea"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="right|top"
+						android:src="@drawable/icon_avatar_teacher"
+						android:visibility="gone" />
+
+					<ImageView
+						android:layout_height="match_parent"
+						android:layout_width="match_parent"
+						android:background="@drawable/avatar_mask_40" />
+
+				</FrameLayout>
+
+				<TextView
+					android:id="@+id/settings_myinfo"
+					style="@style/standard_list_item_with_arrow"
+					android:layout_centerVertical="true"
+					android:layout_marginLeft="80dp" />
+
+
+			</RelativeLayout>
+
+			<ImageView
+				style="@style/bg_section_divider_line_light"/>
+
+			<TextView
+				android:id="@+id/settings_my_qrcode"
+				android:text="@string/settings_my_qrcode"
+				style="@style/standard_list_item_with_arrow"/>
+
+			<ImageView
+				style="@style/bg_section_divider_line_light"/>
+
+			<TextView
+				android:id="@+id/settings_account"
+				android:text="@string/settings_account"
+				style="@style/standard_list_item_with_arrow"/>
+
+			<ImageView
+				style="@style/bg_section_divider_line_light"/>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" >
+
+				<TextView
+					android:id="@+id/settings_ignore_school_invitations"
+					android:text="@string/settings_ignore_school_invitations"
+				    style="@style/standard_list_item" />
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					style="@style/standard_text_gray"
+					android:paddingRight="@dimen/padding_medium"
+					android:text="@string/bool_no"
+					android:id="@+id/txt_ignore_school_invitations_value"
+					android:layout_centerVertical="true"
+					android:layout_alignParentRight="true"
+					android:layout_alignParentEnd="true"/>
+
+			</RelativeLayout>
+
+			<ImageView
+				style="@style/bg_section_divider_line_dark"/>
+
+			<TextView
+				android:id="@+id/settings_privacy"
+				android:text="@string/settings_privacy"
+				android:visibility="gone"
+				style="@style/standard_list_item_with_arrow"/>
+
+			<ImageView
+				android:visibility="gone"
+				style="@style/standard_list_divider"/>
+
+			<ImageView
+				android:layout_marginTop="@dimen/padding_large"
+				style="@style/bg_section_divider_line_dark"/>
+
+			<TextView
+				android:id="@+id/settings_view_school_invitations"
+				android:text="@string/settings_view_school_invitations"
+				style="@style/standard_list_item_with_arrow"/>
+
+			<ImageView
+				style="@style/bg_section_divider_line_dark"/>
+
+			<ImageView
+				android:layout_marginTop="@dimen/padding_large"
+				style="@style/bg_section_divider_line_dark"/>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/settings_upgrade_check_for_updates"
+				style="@style/standard_list_item"
+				android:clickable="true"
+				android:padding="0dp">
+
+				<TextView
+					android:id="@+id/textView_upgrade"
+					android:text="@string/settings_upgrade_check_for_updates"
+					style="@style/standard_list_item_with_arrow" />
+
+				<RelativeLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_alignParentRight="true"
+					android:layout_marginRight="30dp" >
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:id="@+id/app_updates_available_indicator"
+						android:padding="2dp"
+						android:text="NEW"
+						android:gravity="center_vertical"
+						android:textColor="@color/white"
+						android:textSize="12sp"
+						android:clickable="true"
+						android:visibility="gone"
+						android:background="@drawable/icon_setting_update_new" />
+
+					<TextView
+						android:id="@+id/textView_check_update"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_centerVertical="true"
+						android:textColor="@color/gray_40"
+						android:layout_toRightOf="@id/app_updates_available_indicator"
+						android:layout_marginLeft="5dp"
+						android:textSize="16sp"
+						android:clickable="true" />
+
+
+				</RelativeLayout>
+
+			</RelativeLayout>
+
+			<ImageView
+				style="@style/bg_section_divider_line_light"/>
+
+			<TextView
+				android:id="@+id/settings_tell_friend"
+				android:text="@string/settings_tell_friend"
+				style="@style/standard_list_item_with_arrow"
+				android:visibility="gone"/>
+
+			<ImageView
+				style="@style/bg_section_divider_line_light"
+				android:visibility="gone"/>
+
+			<TextView
+				android:id="@+id/settings_rate"
+				android:text="@string/settings_rate"
+				style="@style/standard_list_item_with_arrow"
+				android:visibility="gone"/>
+
+			<ImageView
+				style="@style/bg_section_divider_line_light"
+				android:visibility="gone"/>
+
+			<TextView
+				android:id="@+id/settings_about"
+				style="@style/standard_list_item_with_arrow"
+				android:text="@string/settings_about" />
+
+
+			<ImageView
+				style="@style/bg_section_divider_line_dark"/>
+
+		</LinearLayout>
+
+	</ScrollView>
+
+</RelativeLayout><!-- From: file:/E:/git_android/omim_android/project/res/layout/activity_setting.xml -->

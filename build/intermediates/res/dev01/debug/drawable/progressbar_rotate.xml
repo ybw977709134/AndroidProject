@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- progressbar like iOS -->
+<animated-rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:drawable = "@drawable/colorful_ptr_rotate" >
+
+</animated-rotate><!-- From: file:/E:/git_android/omim_android/lib/pulltorefresh/res/drawable/progressbar_rotate.xml --><!-- From: file:/E:/git_android/omim_android/project/build/intermediates/exploded-aar/omim_android.lib/pulltorefresh/unspecified/res/drawable/progressbar_rotate.xml -->

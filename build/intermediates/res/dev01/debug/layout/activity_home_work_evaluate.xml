@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:layout_alignParentTop="true"
+        style="?attr/navbar">
+
+        <ImageButton
+            android:id="@+id/title_back"
+            android:layout_height="50dp"
+            android:layout_width="20dp"
+            android:layout_alignParentLeft="true"
+            android:background="@null"
+            android:src="@drawable/icon_back_selector"/>
+
+        <co.onemeter.oneapp.ui.widget.PressedTextView
+            android:id="@+id/textView_homework_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/title_back"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:clickable="true"
+            android:textColor="@color/white"
+            android:text="name" />
+
+        <TextView
+            android:id="@+id/contact_current_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="评分"
+            style="@style/page_title_dark"/>
+
+        <co.onemeter.oneapp.ui.widget.PressedTextView
+            android:id="@+id/textView_homework_send"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:clickable="true"
+            android:textColor="@color/white"
+            android:text="发送" />
+    </RelativeLayout>
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bg_section_divider_line_dark"/>
+
+
+    <!-- 完整性 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:text="完整性"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/homeworkRatingBar"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:numStars="5"
+            android:stepSize="1" />
+
+        </RelativeLayout>
+
+
+    <!-- 及时性 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:text="及时性 "/>
+
+        <RatingBar
+            android:id="@+id/ratingBar_timely"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/homeworkRatingBar"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:numStars="5"
+            android:stepSize="1" />
+
+    </RelativeLayout>
+
+
+    <!-- 准确性 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:text="准确性"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar_exact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/homeworkRatingBar"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:numStars="5"
+            android:stepSize="1" />
+
+    </RelativeLayout>
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_section_divider_line_dark"/>
+
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bg_section_divider_line_dark"/>
+
+
+
+    <!-- 评语 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:text="评语"/>
+
+        <Button
+            android:id="@+id/btn_comment"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:text="评语模板"
+            android:textColor="@color/blue_12"
+            android:background="@drawable/btn_small_valid"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editText_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="top"
+            android:singleLine="false"
+            android:maxLines="3"
+            android:maxLength="20"
+            android:padding="20dp"
+            android:background="@null"
+            android:textColorHint="@color/gray_40"
+            android:hint="最多20字"
+            android:textColor="@color/text_gray2"
+            android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_section_divider_line_dark"/>
+
+
+
+
+
+
+
+
+    </LinearLayout><!-- From: file:/E:/git_android/omim_android/project/res/layout/activity_home_work_evaluate.xml -->

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@android:id/background"
+        android:drawable="@drawable/icon_star_grey"></item>
+
+    <item android:id="@android:id/secondaryProgress"
+        android:drawable="@drawable/icon_star_grey"></item>
+
+    <item android:id="@android:id/progress"
+        android:drawable="@drawable/icon_star_orange"></item>
+
+</layer-list><!-- From: file:/E:/git_android/omim_android/project/res/drawable/homework_ratiing_bar.xml -->

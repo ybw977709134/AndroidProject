@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Timeline 页面的过滤器，用于筛选动态的发布者、类别。 -->
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/background_light"
+	android:weightSum="2">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:layout_weight="1" > 
+		<TextView
+			android:id="@+id/btn_sender"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:gravity="center"
+			android:drawablePadding="5dp"
+			android:drawableRight="@drawable/timeline_dropdown_mark_collapsed"
+			android:textColor="@color/text_gray32"
+			android:text="@string/timeline_filter_sender"/>
+	</RelativeLayout>
+
+	<ImageView
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_marginTop="5dp"
+		android:layout_marginBottom="5dp"
+		android:background="@drawable/icon_events_category_line"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:layout_weight="1" >
+		<TextView
+			android:id="@+id/btn_cat"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:gravity="center"
+			android:drawablePadding="5dp"
+			android:drawableRight="@drawable/timeline_dropdown_mark_collapsed"
+			android:textColor="@color/text_gray32"
+			android:text="@string/timeline_filter_category"/>
+	</RelativeLayout>
+</LinearLayout><!-- From: file:/E:/git_android/omim_android/project/res/layout/timeline_filter.xml -->
